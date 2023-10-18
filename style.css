@@ -16,3 +16,46 @@ img{
 
 /* ------------------------------------------------------ */
 
+/* ------- BODY ORGANIZATION ------- */
+
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 
+        "me me"
+        "as na"
+        "as ma"
+    ;
+    grid-template-columns: 70px 1fr;
+    grid-template-rows: 70px 60px 1fr;
+
+}
+
+body>menu {
+    grid-area: me;
+    background-color: lightgreen;
+}
+
+body>nav {
+    grid-area: na;
+    background-color: lightskyblue;
+}
+
+body>aside {
+    grid-area: as;
+    background-color: lightseagreen;
+}
+
+body>main {
+    grid-area: ma;
+    background-color: rgb(255, 255, 115);
+}
+
+
+
+
+
+
+
+
+/* ------------------------------------------------------ */
