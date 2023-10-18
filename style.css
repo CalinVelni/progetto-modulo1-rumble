@@ -1,7 +1,7 @@
 /* ------- GENERIC ------- */
 
 :root{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: sans-serif;
 
     --light-gray: hsl(214deg 30% 96%);
     --medium-gray: hsl(214deg 15% 92%);
@@ -27,8 +27,24 @@ button {
     background-color: var(--light-gray);
 }
 
+button:hover {
+    background-color: var(--dark-gray);
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style-type: none;
+}
+
 hr {
     border-top: 1.5px solid var(--border-gray);
+
+
 }
 
 
@@ -56,12 +72,12 @@ body>menu {
 
 body>nav {
     grid-area: na;
-    background-color: lightskyblue;
+    background-color: white;
 }
 
 body>aside {
     grid-area: as;
-    background-color: lightseagreen;
+    background-color: white;
     border-right: 1.5px solid var(--border-gray);
 }
 
@@ -69,6 +85,7 @@ body>main {
     grid-area: ma;
     background-color: var(--medium-gray);
     overflow: scroll;
+
     scrollbar-width: thin;
     scrollbar-color: transparent darkgray;
 }
@@ -100,22 +117,49 @@ menu {
 
 /* ------------------------------------------------------ */
 
+/* ------- NAVBAR ------- */
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav>button {
+    padding: .4rem 1rem;
+    margin: 1rem 0;
+    
+}
+
+/* ------------------------------------------------------ */
+
 /* ------- SIDEBAR ------- */
 
-menu {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
+aside {
+    font-size: .65rem;
+    text-align: center;
+    overflow: scroll;
 }
 
-.logo {
-    display: flex;
+aside>section>li {
+    text-align: center;
+    padding: 10px;
 }
 
-.searchbar {
-    margin: 0 auto;
+aside>hr {
+    width: 70%;
+    margin: 20px auto;
 }
+
+aside>p {
+    font-weight: 650;
+    margin-bottom: 15px;
+}
+
+.channels>div>img {
+    border-radius: 50%;
+    margin: 5px 0;
+}
+
 
 
 
