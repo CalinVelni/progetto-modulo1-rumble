@@ -78,6 +78,33 @@ body>main {
 
 /* ------- VIDEO ROWS ------- */
 
+header {
+    background-color: var(--light-gray);
+}
+
+#jumbo-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+
+#jumbo-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .25rem;
+    padding: 1rem;
+}
+
+.jumbo-title>p {
+    font-size: 1,5rem;
+    color: var(--dark-gray);
+    padding: 1.5rem 0;
+}
+
 .category-title {
     display: flex;
     justify-content: space-between;
@@ -85,6 +112,18 @@ body>main {
     margin: 2rem;
 }
 
+.vertical-video {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.one-row-video {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin: 2rem;
+}
 
 .two-rows-video {
     display: grid;
@@ -103,15 +142,13 @@ body>main {
 .video-title {
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
     overflow: hidden;
 }
 
 .text>* {
     padding: .3rem
 }
-
-
 
 .profile-picture>img {
     border-radius: 50%;
@@ -152,7 +189,11 @@ body>main {
     .two-rows-video {
         grid-template-rows: 1fr 1fr;
         grid-template-columns: repeat(3, 1fr);
-    
+    }
+
+    .one-row-video {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 
@@ -167,13 +208,21 @@ body>main {
     .two-rows-video {
         grid-template-rows: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
+    }
 
+    .one-row-video {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 
 /* --- Tablet S --- */
 
 @media screen and (max-width: 699px) {
+    #jumbo-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 200px;
+    }
     
 }
 
@@ -184,4 +233,15 @@ body>main {
     .two-rows-video {
         grid-template-rows: repeat(4, ifr);
         grid-template-columns: 1fr;
+    }
+
+    .one-row-video {
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+    }
+
+    #jumbo-text {
+        justify-content: flex-start;
+        padding: 0;
+    }
 }
