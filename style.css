@@ -27,6 +27,10 @@ button {
     background-color: var(--light-gray);
 }
 
+hr {
+    border-top: 1px solid var(--border-gray);
+}
+
 
 /* ------------------------------------------------------ */
 
@@ -40,8 +44,8 @@ body {
         "as na"
         "as ma"
     ;
-     grid-template-rows: 70px 60px 1fr;   grid-template-columns: 70px 1fr;
-
+     grid-template-rows: 70px 60px 1fr;   
+     grid-template-columns: 70px 1fr;
 }
 
 body>menu {
@@ -64,7 +68,11 @@ body>aside {
 body>main {
     grid-area: ma;
     background-color: var(--medium-gray);
+    overflow: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: transparent darkgray;
 }
+
 
 /* ------------------------------------------------------ */
 
@@ -77,6 +85,7 @@ body>main {
     margin: 2rem;
 }
 
+
 .two-rows-video {
     display: grid;
     grid-template-rows: 1fr 1fr;
@@ -88,7 +97,21 @@ body>main {
 .video-details-container {
     display: flex;
     gap: .5rem;
+    margin: .75rem 0;
 }
+
+.video-title {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.text>* {
+    padding: .3rem
+}
+
+
 
 .profile-picture>img {
     border-radius: 50%;
@@ -100,8 +123,6 @@ body>main {
 
 
 /* ------------------------------------------------------ */
-
-
 
 /* ------- MEDIA QUERIES ------- */
 
@@ -122,7 +143,15 @@ body>main {
 
 /* --- Desktop S --- */
 
-@media screen and (max-width: 1049p {
+@media screen and (max-width: 1049px) {
+
+    .desktop-s-hide {
+        display: none;
+    }
+
+    .two-rows-video {
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: repeat(3, 1fr);
     
 }
 
@@ -131,19 +160,28 @@ body>main {
 
 @media screen and (max-width: 799px) {
 
+    .tablet-l-hide {
+        display: none;
+    }
+
+    .two-rows-video {
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+
 }
 
 
 /* --- Tablet S --- */
 
 @media screen and (max-width: 699px) {
-
+    
 }
 
 
 /* --- Mobile --- */
 
 @media screen and (max-width: 499px) {
-
+    .two-rows-video {
+        grid-template-rows: repeat(4, ifr);
+        grid-template-columns: 1fr;
 }
-
