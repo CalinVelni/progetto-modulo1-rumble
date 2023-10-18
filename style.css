@@ -2,6 +2,11 @@
 
 :root{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    --light-gray: hsl(214deg 30% 96%);
+    --medium-gray: hsl(214deg 15% 92%);
+    --dark-gray: hsl(211deg 16% 49%);
+    --border-gray: hsl(209deg 32% 88%);
 }
 
 *{
@@ -14,9 +19,18 @@ img{
     max-width: 100%;
 }
 
+button {
+    font-family: inherit;
+    border: none;
+    padding: .75rem 1rem;
+    border-radius: 2rem;
+    background-color: var(--light-gray);
+}
+
+
 /* ------------------------------------------------------ */
 
-/* ------- BODY ORGANIZATION ------- */
+/* ------- LAYOUT------- */
 
 body {
     height: 100vh;
@@ -26,14 +40,14 @@ body {
         "as na"
         "as ma"
     ;
-    grid-template-columns: 70px 1fr;
-    grid-template-rows: 70px 60px 1fr;
+     grid-template-rows: 70px 60px 1fr;   grid-template-columns: 70px 1fr;
 
 }
 
 body>menu {
     grid-area: me;
     background-color: lightgreen;
+    border-bottom: 1px solid var(--border-gray);
 }
 
 body>nav {
@@ -44,18 +58,92 @@ body>nav {
 body>aside {
     grid-area: as;
     background-color: lightseagreen;
+    border-right: 1px solid var(--border-gray);
 }
 
 body>main {
     grid-area: ma;
-    background-color: rgb(255, 255, 115);
+    background-color: var(--medium-gray);
+}
+
+/* ------------------------------------------------------ */
+
+/* ------- VIDEO ROWS ------- */
+
+.category-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem;
+}
+
+.two-rows-video {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin: 2rem;
+}
+
+.video-details-container {
+    display: flex;
+    gap: .5rem;
+}
+
+.profile-picture>img {
+    border-radius: 50%;
+}
+
+.thumbnail>img {
+    border-radius: .75rem;
 }
 
 
-
-
-
-
-
-
 /* ------------------------------------------------------ */
+
+
+
+/* ------- MEDIA QUERIES ------- */
+
+/* --- Desktop M --- */
+
+@media screen and (max-width: 1199px) {
+    body {
+        grid-template-row: 70px 60px 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "me"
+            "na"
+            "ma"
+        ;
+    }
+}
+
+
+/* --- Desktop S --- */
+
+@media screen and (max-width: 1049p {
+    
+}
+
+
+/* --- Tablet L --- */
+
+@media screen and (max-width: 799px) {
+
+}
+
+
+/* --- Tablet S --- */
+
+@media screen and (max-width: 699px) {
+
+}
+
+
+/* --- Mobile --- */
+
+@media screen and (max-width: 499px) {
+
+}
+
