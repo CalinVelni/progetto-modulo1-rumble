@@ -28,13 +28,13 @@ button {
 }
 
 hr {
-    border-top: 1px solid var(--border-gray);
+    border-top: 1.5px solid var(--border-gray);
 }
 
 
 /* ------------------------------------------------------ */
 
-/* ------- LAYOUT------- */
+/* ------- LAYOUT ------- */
 
 body {
     height: 100vh;
@@ -50,8 +50,8 @@ body {
 
 body>menu {
     grid-area: me;
-    background-color: lightgreen;
-    border-bottom: 1px solid var(--border-gray);
+    background-color: white;
+    border-bottom: 1.5px solid var(--border-gray);
 }
 
 body>nav {
@@ -62,7 +62,7 @@ body>nav {
 body>aside {
     grid-area: as;
     background-color: lightseagreen;
-    border-right: 1px solid var(--border-gray);
+    border-right: 1.5px solid var(--border-gray);
 }
 
 body>main {
@@ -72,6 +72,51 @@ body>main {
     scrollbar-width: thin;
     scrollbar-color: transparent darkgray;
 }
+
+
+/* ------------------------------------------------------ */
+
+/* ------- SEARCHBAR ------- */
+
+menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.logo {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1.5rem;
+    padding: 1.5rem;
+}
+
+.searchbar {
+    margin: 0 auto;
+}
+
+
+
+/* ------------------------------------------------------ */
+
+/* ------- SIDEBAR ------- */
+
+menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.logo {
+    display: flex;
+}
+
+.searchbar {
+    margin: 0 auto;
+}
+
 
 
 /* ------------------------------------------------------ */
