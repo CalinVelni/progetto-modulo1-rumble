@@ -7,6 +7,7 @@
     --medium-gray: hsl(214deg 15% 92%);
     --dark-gray: hsl(211deg 16% 49%);
     --border-gray: hsl(209deg 32% 88%);
+    --green: hsl(90deg 75% 46%);
 }
 
 *{
@@ -125,8 +126,8 @@ nav {
 }
 
 nav>button {
-    padding: .4rem 1rem;
-    margin: 1rem 0;
+    padding: .4rem .8rem;
+    margin: .9rem 0;
     
 }
 
@@ -204,7 +205,9 @@ header {
 .vertical-video {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: 2rem;
+    margin: 2rem;
 }
 
 .one-row-video {
@@ -247,6 +250,55 @@ header {
     border-radius: .75rem;
 }
 
+main button {
+    border: 1px solid var(--green);
+}
+
+
+/* ------------------------------------------------------ */
+
+/* ------- INFO & CONTACTS ------- */
+
+footer {
+    font-size: .75rem;
+    min-height: 80px;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 3rem;
+}
+
+.contacts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-weight: 750;
+    font-size: .85rem;
+
+}
+
+.privacy {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+footer * {
+    text-align: center;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+
+
 
 /* ------------------------------------------------------ */
 
@@ -255,6 +307,11 @@ header {
 /* --- Desktop M --- */
 
 @media screen and (max-width: 1199px) {
+
+    aside {
+        display: none;
+    }
+
     body {
         grid-template-row: 70px 60px 1fr;
         grid-template-columns: 1fr;
