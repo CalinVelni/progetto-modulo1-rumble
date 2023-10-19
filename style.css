@@ -189,7 +189,13 @@ aside {
 
 aside>section>li {
     text-align: center;
-    padding: 10px;
+    padding: 10%;
+    margin: 0 10%;
+    border-radius: 15%;
+}
+
+aside>section>li:hover {
+    background-color: var(--light-gray);
 }
 
 aside>hr {
@@ -206,8 +212,6 @@ aside>p {
     border-radius: 50%;
     margin: 5px 0;
 }
-
-
 
 
 /* ------------------------------------------------------ */
