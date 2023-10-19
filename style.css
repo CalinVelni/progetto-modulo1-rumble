@@ -468,7 +468,15 @@ footer a:hover {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 200px;
     }
-    
+
+    .searchbar>input {
+        display: none;
+    }
+
+    .searchbar>div {
+        border: solid 1px var(--border-gray);
+        border-radius: .5rem;
+    }
 }
 
 
